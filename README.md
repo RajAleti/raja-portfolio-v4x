@@ -18,3 +18,4 @@ This project uses [Vite](https://vitejs.dev/) with React and Tailwind CSS.
    ```
 
 Ensure `npm install` is run before building so that Vite and other dependencies are available.
+
