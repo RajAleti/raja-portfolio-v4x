@@ -3,7 +3,7 @@ import TopNav from '@/components/TopNav';
 import Sidebar from '@/components/Sidebar';
 
 const SkillTag = ({ label }) => (
-  <span className="bg-indigo-600 text-white text-xs px-3 py-1 rounded-full mr-2 mb-2 inline-block hover:bg-indigo-700 transition">
+  <span className="bg-indigo-600 text-white text-xs px-3 py-1 rounded-full mr-2 mb-2 inline-block hover:bg-indigo-400 transition">
     {label}
   </span>
 );
@@ -22,6 +22,9 @@ export default function Home() {
             <div>
               <h2 className="text-3xl font-bold mb-1">Raja Aleti</h2>
               <p className="text-slate-300">Sr. Cloud & DevOps Engineer</p>
+              <a href="/Raja_Aleti_Resume.pdf" download className="inline-block mt-2 text-sm text-indigo-400 hover:underline">
+                📄 Download Resume
+              </a>
             </div>
           </div>
           <p className="mt-4 max-w-2xl text-slate-400">
@@ -57,20 +60,15 @@ export default function Home() {
         <section id="projects">
           <h2 className="text-2xl font-bold mb-4">Projects</h2>
           <div className="space-y-6">
-            <div className="bg-slate-800 p-4 rounded shadow">
+            <div className="bg-slate-800 p-4 rounded shadow hover:scale-[1.02] transition">
               <h3 className="text-lg font-semibold">AKS & EKS GitOps Platform</h3>
               <p>Managed lifecycle of AKS/EKS clusters using Terraform and ArgoCD with policy-as-code enforcement and GitOps deployment flows.</p>
               <div className="mt-2"><SkillTag label="Terraform" /><SkillTag label="ArgoCD" /><SkillTag label="Kubernetes" /><SkillTag label="EPAC" /></div>
             </div>
-            <div className="bg-slate-800 p-4 rounded shadow">
+            <div className="bg-slate-800 p-4 rounded shadow hover:scale-[1.02] transition">
               <h3 className="text-lg font-semibold">Multi-Cloud CI/CD Delivery</h3>
               <p>Designed secure pipelines across Azure & AWS using GitHub Actions and Spacelift; managed CODEOWNERS, approvals, and reusable IaC modules.</p>
               <div className="mt-2"><SkillTag label="Spacelift" /><SkillTag label="GitHub Actions" /><SkillTag label="CI/CD" /></div>
-            </div>
-            <div className="bg-slate-800 p-4 rounded shadow">
-              <h3 className="text-lg font-semibold">Secrets & Certificate Automation</h3>
-              <p>Integrated Key Vault, Venafi, and CyberArk to automate secret rotation, enhance least-privilege access, and ensure certificate lifecycle management.</p>
-              <div className="mt-2"><SkillTag label="Key Vault" /><SkillTag label="Venafi" /><SkillTag label="CyberArk" /></div>
             </div>
           </div>
         </section>
@@ -95,15 +93,36 @@ export default function Home() {
                 <li>Deployed secure pipelines with GitHub Actions, SonarQube, Artifactory</li>
               </ul>
             </div>
-            <div>
-              <strong>Verizon – Azure Cloud Engineer (2020–2022)</strong>
-              <ul className="list-disc ml-5">
-                <li>Automated AKS cluster creation and rollback using Helm</li>
-                <li>Migrated VM infra with ARM templates and Azure Pipelines</li>
-                <li>Integrated Function Apps, App Gateway, and App Insights</li>
-              </ul>
-            </div>
           </div>
+        </section>
+
+        {/* Education */}
+        <section id="education">
+          <h2 className="text-2xl font-bold mb-4">Education</h2>
+          <div className="text-sm">
+            <p><strong>University of Central Missouri</strong></p>
+            <p>Master’s in Computer Science — GPA 3.90</p>
+            <p className="text-slate-400">Jan 2021 – May 2022</p>
+          </div>
+        </section>
+
+        {/* Certifications */}
+        <section id="certifications">
+          <h2 className="text-2xl font-bold mb-4">Certifications</h2>
+          <ul className="list-disc ml-5 text-sm space-y-2">
+            <li>
+              <a href="https://www.credly.com/badges/f64b99db-98c4-47e2-a8e2-c27cf25d8882/linked_in_profile"
+                 className="text-indigo-400 hover:underline" target="_blank" rel="noopener noreferrer">
+                Microsoft Certified: Azure Administrator Associate (AZ-104)
+              </a>
+            </li>
+            <li>
+              <a href="https://www.credly.com/badges/6eb10c20-877c-493b-b085-15f2b4a2bd16/linked_in_profile"
+                 className="text-indigo-400 hover:underline" target="_blank" rel="noopener noreferrer">
+                Microsoft Certified: DevOps Engineer Expert (AZ-400)
+              </a>
+            </li>
+          </ul>
         </section>
 
         {/* Contact */}
